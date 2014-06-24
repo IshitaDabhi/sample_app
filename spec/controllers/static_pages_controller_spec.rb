@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe StaticPagesController, :type => :controller do
 
-  describe "GET '...'" do
+  describe "GET 'help'" do
     it "returns http success" do
-      get '...'
+      get 'help'
       expect(response).to be_success
     end
   end
