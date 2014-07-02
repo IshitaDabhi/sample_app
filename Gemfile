@@ -5,6 +5,8 @@ gem 'rails', '4.0.5'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby','3.1.2'
+
+
 group :test do
   gem 'selenium-webdriver', '2.35.1'
  gem 'cucumber-rails','1.4.0', :require => false
