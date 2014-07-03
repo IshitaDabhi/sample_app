@@ -63,7 +63,8 @@ describe "Authentication" do
 
     describe "authorization" do
 
-      describe "as non-admin user" do
+
+       describe "as non-admin user" do
       let(:user) { FactoryGirl.create(:user) }
       let(:non_admin) { FactoryGirl.create(:user) }
 
@@ -74,7 +75,6 @@ describe "Authentication" do
         specify { expect(response).to redirect_to(root_url) }
       end
     end
-
 
     describe "for non-signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
@@ -113,6 +113,8 @@ describe "Authentication" do
         end
       end
 
+
+      
     end
 
     describe "as wrong user" do

@@ -7,24 +7,24 @@ require 'spec_helper'
     subject { page }
 
     describe "index" do
-    let(:user) { FactoryGirl.create(:user) }
-    before(:each) do
-      sign_in user
-      visit users_path
-    end
+        let(:user) { FactoryGirl.create(:user) }
+        before(:each) do
+           sign_in user
+          visit users_path
+     end
 
-    it { should have_title('All users') }
-    it { should have_content('All users') }
+     it { should have_title('All users') }
+     it { should have_content('All users') }
 
 
 
-    it "should list each user" do
+     it "should list each user" do
       User.all.each do |user|
         expect(page).to have_selector('li', text: user.name)
       end
-    end
+      end
 
-    describe "pagination" do
+      describe "pagination" do
 
       before(:all) { 30.times { FactoryGirl.create(:user) } }
       after(:all)  { User.delete_all }
@@ -58,10 +58,7 @@ require 'spec_helper'
         end
         it { should_not have_link('delete', href: user_path(admin)) }
       end
-    end
-
-
-
+     end
   end
   
     describe "edit" do
